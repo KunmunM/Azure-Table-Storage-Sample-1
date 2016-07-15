@@ -10,7 +10,7 @@ namespace TableStore_console_app
 {
     class Program
     {
-        private static string _connectionString = "DefaultEndpointsProtocol=https;AccountName=serversncodedemo;AccountKey=QAQwB44359UPFbjkB+4QpAy+HsZYZF2BT1Fo4OJi+CFhSWJd0HU+X05wMAIgl2LhJ2FSgG9csM8ZRU//scNqeg==";
+        private static string _connectionString = "DefaultEndpointsProtocol=https;AccountName=ACCOUNTNAME;AccountKey=ACCOUNTKEY";
 
         static void Main(string[] args)
         {
@@ -26,15 +26,6 @@ namespace TableStore_console_app
             // Create the table if it doesn't exist.
             table.CreateIfNotExists();
 
-            
-            
-            
-            
-            
-            
-            
-            
-            
             // Get All Players for a sport
             TableQuery<PlayerEntity> query = new TableQuery<PlayerEntity>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "soccer"));
 
